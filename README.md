@@ -2,7 +2,7 @@
 
 This is a web interface to [YOLOv8 object detection neural network](https://ultralytics.com/yolov8) that allows to run object detection right in a web browser without any backend using [ONNX runtime](https://onnxruntime.ai/).
 
-This is a source code for a ["How to detect objects in videos in a web browser using YOLOv8 neural network and JavaScript"](https://dev.to/andreygermanov/how-to-detect-objects-on-videos-in-a-web-browser-using-yolov8-neural-network-5h0j) tutorial.
+This is a source code for a ["How to detect objects in videos in a web browser using YOLOv8 neural network and JavaScript"](https://dev.to/andreygermanov/how-to-detect-objects-in-videos-in-a-web-browser-using-yolov8-neural-network-and-javascript-lfb) tutorial.
 
 # Install
 
