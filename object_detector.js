@@ -3,7 +3,7 @@ const video = document.querySelector("video");
 const worker = new Worker("worker.js");
 let boxes = [];
 let interval
-video.addEventListener("play", async() => {
+video.addEventListener("play", () => {
     const canvas = document.querySelector("canvas");
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
