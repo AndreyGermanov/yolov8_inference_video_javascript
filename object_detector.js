@@ -54,7 +54,7 @@ function prepare_input(img) {
 function process_output(output, img_width, img_height) {
     let boxes = [];
     for (let index=0;index<8400;index++) {
-        const [class_id,prob] = [...Array(80).keys()]
+        const [class_id,prob] = [...Array(yolo_classes.length).keys()]
             .map(col => [col, output[8400*(col+4)+index]])
             .reduce((accum, item) => item[1]>accum[1] ? item : accum,[0,0]);
         if (prob < 0.5) {
