@@ -3,6 +3,7 @@ const video = document.querySelector("video");
 const worker = new Worker("worker.js");
 let boxes = [];
 let interval
+let busy = false;
 video.addEventListener("play", () => {
     const canvas = document.querySelector("canvas");
     canvas.width = video.videoWidth;
@@ -12,7 +13,10 @@ video.addEventListener("play", () => {
         context.drawImage(video,0,0);
         draw_boxes(canvas, boxes);
         const input = prepare_input(canvas);
-        worker.postMessage(input);
+        if (!busy) {
+            worker.postMessage(input);
+            busy = true;
+        }
     },30)
 });
 
@@ -20,6 +24,7 @@ worker.onmessage = (event) => {
     const output = event.data;
     const canvas = document.querySelector("canvas");
     boxes =  process_output(output, canvas.width, canvas.height);
+    busy = false;
 };
 
 video.addEventListener("pause", () => {
