@@ -8,6 +8,8 @@ This is a source code for a ["How to detect objects in videos in a web browser u
 
 Clone this repository: `git clone git@github.com:AndreyGermanov/yolov8_inference_video_javascript.git`
 
+Download the last version of the "ort-wasm-simd.wasm" from here: https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort-wasm-simd.wasm to the root of the repository.
+
 # Run
 
 You need to run `index.html` using any local webserver, for example internal webserver of Visual Studio Code. Ensure that 
